@@ -13,7 +13,8 @@ class Base extends Eloquent
 
     public function __construct(array $attributes = [])
     {
-        parent::__construct($attributes);
+        // NOTE: Reference https://github.com/antonioribeiro/tracker/issues/402
+        // parent::__construct($attributes);
 
         $this->setConnection($this->getConfig()->get('connection'));
     }
